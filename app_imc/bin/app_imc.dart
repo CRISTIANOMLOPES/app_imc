@@ -7,17 +7,13 @@ import 'package:app_imc/indice_imc.dart';
 
 void main(List<String> arguments) {
   //Cria as variáveis de entrada
+  String? nome;
   var idade = "";
   var peso = "";
   var altura = "";
   bool valida = true;
-  bool sexo = true;
-  String genero;
-  if (sexo) {
-    genero = "Masculino";
-  } else {
-    genero = "Feminino";
-  }
+
+  nome = (lerConsole("Digite o nome:"));
 
   //testa se recebe int
   while (valida) {
@@ -59,15 +55,15 @@ void main(List<String> arguments) {
   valida = true;
 
   //Cria instância de DadosInt e armazena as informações
-  DadosImc calc1 = DadosImc(idade, peso, altura);
+  DadosImc calc1 = DadosImc(nome, idade, peso, altura);
 
   // Imprime as informações da instância
   print(calc1);
-  print("Sexo: $genero");
+
   //Envia os dados para a função calculo na Classe CalculadoraImc
   var imc = CalculadoraImc().calculo(idade, peso, altura);
   print("Seu IMC é: $imc");
-  Indice().imc(imc, sexo);
+  Indice().imc(imc);
 }
 
 //Função ler console
