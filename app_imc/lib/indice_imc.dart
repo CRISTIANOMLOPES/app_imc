@@ -2,16 +2,22 @@ class Indice {
   imc(imc) {
     double imccalc = double.parse(imc);
 
-    if (imccalc < 20) {
-      print("IMC abaixo do Normal! Se alimente!");
-    } else if (imccalc >= 20 && imccalc <= 24.9) {
-      print("IMC Normal!");
-    } else if (imccalc >= 25 && imccalc <= 29.9) {
-      print("IMC com Obesidade leve!");
-    } else if (imccalc >= 30 && imccalc <= 39.9) {
-      print("IMC com Obesidade Moderada!");
+    if (imccalc < 16) {
+      print("IMC - Magreza Grave!");
+    } else if (imccalc >= 16 && imccalc < 17) {
+      print("IMC - Magreza moderada");
+    } else if (imccalc >= 17 && imccalc < 18.5) {
+      print("IMC - Magreza leve!");
+    } else if (imccalc >= 18.5 && imccalc < 25) {
+      print("IMC normal!");
+    } else if (imccalc >= 25 && imccalc < 30) {
+      print("IMC - Sobrepeso!");
+    } else if (imccalc >= 30 && imccalc < 35) {
+      print("IMC - Obesidade Grau I!");
+    } else if (imccalc >= 35 && imccalc < 40) {
+      print("IMC - Obesidade Grau II(Severa)!");
     } else {
-      print("IMC com Obesidade Mórbida! CUIDADO!!!");
+      print("IMC - Obesidade Grau III (Mórbida)!");
     }
   }
 }

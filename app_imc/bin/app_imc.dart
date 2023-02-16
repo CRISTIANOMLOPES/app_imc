@@ -32,10 +32,10 @@ void main(List<String> arguments) {
   while (valida) {
     valida = false;
     try {
-      double pesolida = double.parse(lerConsole("Digite o peso:"));
+      double pesolida = double.parse(lerConsole("Digite o peso em 'kg':"));
       peso = pesolida.toString();
     } catch (e) {
-      print("Peso inválida! Digite novamente!");
+      print("Peso inválido! Digite novamente!");
       valida = true;
     }
   }
@@ -45,7 +45,7 @@ void main(List<String> arguments) {
   while (valida) {
     valida = false;
     try {
-      int alturalida = int.parse(lerConsole("Digite a altura:"));
+      int alturalida = int.parse(lerConsole("Digite a altura em 'cm':"));
       altura = alturalida.toString();
     } catch (e) {
       print("Altura inválida! Digite novamente!");
